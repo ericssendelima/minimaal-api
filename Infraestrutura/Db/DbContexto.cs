@@ -3,13 +3,9 @@ using MinimalApi.Dominio.Entidades;
 
 namespace MinimalApi.Infraestrutura.Db
 {
-  public class DbContexto : DbContext
+  public class DbContexto(DbContextOptions<DbContexto> options) : DbContext(options)
   {
     public DbSet<Adiministrador> Administradores { get; set; } = default!;
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-      optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;");
-    }
   }
 }

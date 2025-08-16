@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using minimal_api.Dominio.Enums;
 
 namespace MinimalApi.Dominio.Entidades
 {
@@ -19,7 +20,8 @@ namespace MinimalApi.Dominio.Entidades
     public string Senha { get; set; } = default!;
 
     [Required]
-    [StringLength(10)]
+    [StringLength(50)]
+
     public string Perfil { get; set; } = default!;
   }
 }

@@ -94,10 +94,6 @@ namespace minimal_api
                       .AllowAnyHeader();
               });
       });
-
-      // using var scope = services.BuildServiceProvider().GetRequiredService<DbContext>();
-
-      // scope.Database.Migrate();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

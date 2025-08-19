@@ -11,8 +11,8 @@ using MinimalApi.Infraestrutura.Db;
 namespace minimal_api.Migrations
 {
     [DbContext(typeof(DbContexto))]
-    [Migration("20250814130800_VeiculosMigration")]
-    partial class VeiculosMigration
+    [Migration("20250819165850_InicialCreate")]
+    partial class InicialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,8 +39,8 @@ namespace minimal_api.Migrations
 
                     b.Property<string>("Perfil")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Senha")
                         .IsRequired()
